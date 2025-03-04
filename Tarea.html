@@ -27,6 +27,7 @@
             margin-top: 20px;
             border-radius: 10px;
             background-color: #f4f4f4;
+            text-align: left;
         }
         .task-box h2 {
             margin-bottom: 10px;
@@ -65,17 +66,6 @@
     </style>
 </head>
 <body>
-    <!-- Pie de página superior -->
-    <div id="2pie" class="header">
-        <h2>CLASES</h2>
-        <p>Lunes 3: No habrán clases - Hasta las 15:50.</p>
-        <p>Martes 4: No habrán clases - Hasta las 15:50.</p>
-        <p>Miércoles 5: Clases normales - Hasta las 15:50.</p>
-        <p>Jueves 6: Clases normales - Hasta las 15:50.</p>
-        <p>Viernes 7: Clases normales - Hasta las 15:50.</p>
-        <p>No tendremos clases toda la semana del Lunes 10 de Marzo.</p>
-        <p>Comenzamos clases normales - Hasta las 17:50.</p>
-    </div>
 
     <div id="inicio" class="container">
         <img src="https://abelcraftok.github.io/cnlp/CNLP.png" width="190" height="190" alt="Logo">
@@ -90,6 +80,7 @@
         </div>
     </div>
     
+    <!-- Pestaña 28-02-2025 -->
     <div id="28-02-2025" class="container" style="display: none;">
         <div class="task-box">
             <h2>Tarea de: Matemáticas</h2>
@@ -103,18 +94,38 @@
             <p>8: Tres últimas cifras con 0 o múltiplo de 8, también sumando las últimas 3.</p>
             <p>9: Suma de sus cifras de un múltiplo de 9.</p>
             <p>10: Su última cifra termina en 0.</p>
-            <div class="separator"></div>
-            <h2>Ejercicio 9:</h2>
-            <p>a. La menor cantidad posible sería 252. (HELENA)</p>
-            <p>b. La menor cantidad si tendría que ser mayor que 500, sería 504. (PEDRO)</p>
-            <div class="separator"></div>
-            <h2>Ejercicio 10:</h2>
-            <p>Para las manzanas se necesitan 6 cajones que entren 36 en cada uno.</p>
-            <p>Para las naranjas se necesitan 5 cajones que entren 36 en cada uno.</p>
         </div>
     </div>
 
-    <!-- Pie de página inferior -->
+    <!-- Pestaña 26-02-2025 -->
+    <div id="26-02-2025" class="container" style="display: none;">
+        <div class="task-box">
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Leer las páginas: 18 y 19 del Cuadernillo.</p>
+            <p>Hacer la página 20 del Cuadernillo.</p>
+            <p>La página 20 tiene que estar resuelta de la siguiente manera:</p>
+            <img src="https://abelcraftok.github.io/cnlp/Lit1-26-02-2025.png" alt="Tarea Literatura">
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Copiar lo que aparece en la siguiente imagen.</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-26-02-2025.png" target="_blank">Clic aquí para ver la imagen...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 7:</h3>
+            <p>64: Todo número par es divisible por 2.</p>
+            <p>4: Sus 2 últimas cifras son 0 o múltiplo de 4.</p>
+            <p>5: Si termina en 0 o en 5.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 8:</h3>
+            <p>a. 1852 - 1258 - 1582.</p>
+            <p>b. 1528 - 1582 - 1852.</p>
+            <p>c. 8215 - 8125 - 1285.</p>
+        </div>
+    </div>
+
+    <!-- Pie de página inferior (solo en Inicio) -->
     <div id="1pie" class="footer">
         <p>Recuerda que este sitio web no está desarrollado por el colegio, sino que lo administra un alumno.</p>
         <p>Forma de contacto al creador:</p>
@@ -125,12 +136,9 @@
     <script>
         function buscarTarea() {
             const fecha = document.getElementById("fechaInput").value.trim();
-            if (fecha === "28/02/2025") {
-                document.getElementById("inicio").style.display = "none";
-                document.getElementById("28-02-2025").style.display = "block";
-            } else {
-                alert("No hay tareas registradas para esta fecha.");
-            }
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("28-02-2025").style.display = fecha === "28/02/2025" ? "block" : "none";
+            document.getElementById("26-02-2025").style.display = fecha === "26/02/2025" ? "block" : "none";
         }
     </script>
 </body>
