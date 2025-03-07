@@ -167,6 +167,22 @@
         </div>
     </div>
 
+    <!-- Pestaña 06-03-2025 -->
+    <div id="06-03-2025" class="container" style="display: none;">
+        <div class="task-box">
+            <h2>Tarea de: Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>Revivision del examen...</p>
+            <p>Entonces no hubo tarea</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Geografía</h2>
+            <div class="separator"></div>
+            <p>Hacer los puntos: 1 (a-, b- y c-), 2 (a- y b-), 3 y el 4</p>
+            <p>Ubicacion: Cuadernillo de Geografía</p>
+            <p>Pagina: 12</p>
+        </div>
+    </div>
+
     <!-- Pestaña 05-03-2025 -->
     <div id="05-03-2025" class="container" style="display: none;">
         <div class="task-box">
@@ -177,6 +193,19 @@
             <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
             <div class="separator"></div>
             <p>Hacer el punto 1 de "Ejercicios de Repaso" que está ubicado en la página 25.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 07-03-2025 -->
+    <div id="07-03-2025" class="container" style="display: none;">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Revision del examen...</p>
+            <p>Por lo tanto no hubo tarea.</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Literatura y Practicas del Lenguaje</h2>
+            <p>Evaluacion las 2 hs</p>
         </div>
     </div>
 
@@ -193,14 +222,22 @@
 
     <script>
         function buscarTarea() {
-            const fecha = document.getElementById("fechaInput").value.trim();
-            document.getElementById("inicio").style.display = "none";
-            document.getElementById("28-02-2025").style.display = fecha === "28/02/2025" ? "block" : "none";
-            document.getElementById("26-02-2025").style.display = fecha === "26/02/2025" ? "block" : "none";
-            document.getElementById("10-02-2025").style.display = fecha === "10/02/2025" ? "block" : "none";
-            document.getElementById("05-03-2025").style.display = fecha === "05/03/2025" ? "block" : "none";
+            var fechaIngresada = document.getElementById("fechaInput").value.trim();
+            var fechaFormateada = fechaIngresada.replace(/\//g, "-"); // Reemplaza / por -
+        
+            // Ocultar todas las tareas
+            var todasLasTareas = document.querySelectorAll(".container");
+            todasLasTareas.forEach(tarea => tarea.style.display = "none");
+        
+            // Mostrar solo la tarea de la fecha ingresada
+            var tareaDelDia = document.getElementById(fechaFormateada);
+            if (tareaDelDia) {
+                tareaDelDia.style.display = "block";
+            } else {
+                alert("No hay tarea para esta fecha.");
+            }
         }
     </script>
-
+        
 </body>
 </html>
