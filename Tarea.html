@@ -78,6 +78,67 @@
             <input type="text" id="fechaInput" class="input-fecha" placeholder="dd/mm/yyyy">
             <button class="button button-secondary" onclick="buscarTarea()">Buscar</button>
         </div>
+        <div class="task-box">
+            <h2>RESUMENES:</h2>
+            <p>Visita los resumenes de lo visto/realizado en el CURSO INTRODUCTORIO.</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen')">Ir a los Resumenes</button>
+        </div>
+    </div>
+
+    <!-- Pestaña resumen -->
+     <div id="resumen" class="container" style="display: none;">
+        <h1>RESUMENES</h1>
+        <div class="task-box">
+            <h2>Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>TEMAS:</p>
+            <p> </p>
+            <p>    -> El Trabajo de los Cientificos</p>
+            <p>    -> ¿Que Estudian las Ciencias Naturales?</p>
+            <p>    -> Lenguaje y Comunicacion</p>
+            <p>    -> Ciencias Naturales en la Argentina</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-C.N')">Ir al Resumen de Ciencias Naturales</button>
+        </div>
+        <div class="task-box">
+            <h2>Practicas del Lenguaje y Literatura</h2>
+            <p>En Practicas del Lenguaje y Literatura hablamos de...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-P.L.L')">Ir al Resumen de Practicas del Lenguaje y Literatura</button>
+        </div>
+        <div class="task-box">
+            <h2>Matemáticas</h2>
+            <p>En matemáticas hicimos trabajos practicos de repaso sobre...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-MAT')">Ir al resumen de Matemáticas</button>
+        </div>
+    </div>
+
+    <!-- Pestaña resumen-C.N -->
+     <div id="resumen-C.N" class="conteiner" style="display: none">
+        <h1>Ciencias Naturales</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-C.N.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
+    </div>
+
+    <!-- Pestaña resumen-P.L.L -->
+     <div id="resumen-P.L.L" class="conteiner" style="display: none">
+        <h1>Practicas del Lenguaje y Literatura</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-P.L.L.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
+    </div>
+
+    <!-- Pestaña resumen-MAT -->
+     <div id="resumen-MAT" class="conteiner" style="display: none;">
+        <h1>Matemáticas</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-MAT.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
     </div>
 
     <!-- Pestaña 28-02-2025 -->
@@ -237,7 +298,16 @@
                 alert("No hay tarea para esta fecha.");
             }
         }
-    </script>
-        
+        function mostrarPestaña(id) {
+        // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+            div.style.display = 'none';
+        });
+
+        // Muestra la pestaña seleccionada
+        document.getElementById(id).style.display = 'block';
+        }
+
+    </script>       
 </body>
 </html>
