@@ -29,6 +29,20 @@
             background-color: #f4f4f4;
             text-align: left;
         }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
+
         .task-box h2 {
             margin-bottom: 10px;
         }
@@ -94,11 +108,10 @@
      <div id="avisos-y-recordatorios" class="container" style="display: none;">
         <img src="https://abelcraftok.github.io/cnlp/CNLP.png" width="190" height="190" alt="Logo">
         <h1>Avisos y Recordatorios</h1>
+        <div class="separator"></div>
         <div class="task-box">
-            <h2>¿Clases el Lunes 17 y el Martes 18?</h2>
-            <p>Entre los compañeros no sabemos todavia pero dependiendo que digan los compañeros que van a ir el Lunes 17, vamos a saber si el Martes 18 habran clases...</p>
-            <div class="separator"></div>
-            <p>Nota del: 16/03/2025</p>
+            <h2>Contraseñas para las respuestas de las tareas</h2>
+            <p>Ahora para acceder a las respuestas de las tareas es necesaria una contraseña. Esta la podras obtener en el Número de Teléfono: <a href="https://wa.me/+542215989210">+54 221 598-9210</a> pidiendosela...</p>
         </div>
      </div>
 
@@ -158,6 +171,13 @@
         </a>
     </div>
 
+    <!-- Pestaña 17-03-2025 -->
+     <div id="17-03-2025" class="container" style="display: none;">
+        <h2>Paro</h2>
+        <div class="separator"></div>
+        <button class="button button-secondary" onclick="showPasswordBox()">🔐 Ingresar 🔓</button>
+    </div>
+    
     <!-- Pestaña 28-02-2025 -->
      <div id="28-02-2025" class="container" style="display: none;">
         <div class="task-box">
@@ -295,10 +315,50 @@
         <p>Correo Electrónico: <a href="mailto:pedrogabrielojeda664@gmail.com">pedrogabrielojeda664@gmail.com</a></p>
         <p>Accede a los grupos de 1ro 7ma:</p>
         <p>Grupo de Alumnos: <a href="https://chat.whatsapp.com/J3aI7dG9dew6fpSnwdFsUJ">Clic aquí</a></p>
-        <p>Grupo de actualizaciones: <a href="https://chat.whatsapp.com/KTiiJvoxkJKJvs0srnZixX">Clic aquí</a></p>
+        <p>Canal de actualizaciones: <a href="https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a">Clic aquí</a></p>
     </div>
 
     <script>
+    function showPasswordBox() {
+        // Crear el fondo negro superpuesto
+        let overlay = document.createElement("div");
+        overlay.id = "overlay";
+        overlay.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 0.8; z-index: 999;";
+        document.body.appendChild(overlay);
+
+        // Crear el recuadro de contraseña
+        let passwordBox = document.createElement("div");
+        passwordBox.id = "passwordBox";
+        passwordBox.style = "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; text-align: center; z-index: 1000;";
+        passwordBox.innerHTML = `
+            <h1>CONTRASEÑA</h1>
+            <input type="password" id="passwordInput" class="recuadro" placeholder="Ingrese su contraseña">
+            <button class="button" onclick="checkPassword()">🔐 Desbloquear 🔓</button>
+            <p><a href="https://wa.me/+542215989210" target="_blank">
+                <button class="button">Solicitar Contraseña</button>
+            </a></p>
+            <br>
+            <button class="button button-secondary" onclick="closePasswordBox()">❌ Cerrar</button>
+        `;
+    
+        document.body.appendChild(passwordBox);
+    }
+
+        const passwords = {
+            "1234": "https://abelcraftok.github.io/cnlp/respuesta.pdf",
+            "5678": "https://otro-enlace.com/documento2.pdf",
+            "abcd": "https://ejemplo.com/documento3.pdf"
+        };
+    
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if (passwords[password]) {
+                window.location.href = passwords[password];
+            } else {
+                alert("Contraseña incorrecta. Inténtelo de nuevo.");
+            }   
+        }
+    
         function buscarTarea() {
             var fechaIngresada = document.getElementById("fechaInput").value.trim();
             var fechaFormateada = fechaIngresada.replace(/\//g, "-"); // Reemplaza / por -
@@ -315,39 +375,17 @@
                 alert("No hay tarea para esta fecha.");
             }
         }
-
-        function buscarNota() {
-            var fechaIngresada = document.getElementById("fechaInput").value.trim();
-            if (!fechaIngresada) {
-                alert("Por favor, ingresa una fecha.");
-                return;
-            }
-
-            // Formatear fecha (reemplaza / o espacio por -)
-            var fechaFormateada = fechaIngresada.replace(/[/\s]/g, "-");
-
-            // Buscar la nota con la fecha ingresada
-            var tareaDelDia = document.getElementById(fechaFormateada);
-
-            if (tareaDelDia) {
-            // Resaltar la nota
-            tareaDelDia.style.border = "2px solid blue";
-            tareaDelDia.scrollIntoView({ behavior: "smooth", block: "center" });
-            } else {
-            alert("No hay una nota para esta fecha.");
-            }
-        }
-
+    
         function mostrarPestaña(id) {
         // Oculta todas las pestañas
             document.querySelectorAll('.container').forEach(div => {
             div.style.display = 'none';
         });
-
+    
         // Muestra la pestaña seleccionada
         document.getElementById(id).style.display = 'block';
         }
-
-    </script>       
+    
+    </script>
 </body>
 </html>
