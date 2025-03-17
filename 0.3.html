@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tareas</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/cnlp/CNLP.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-primary { background-color: #007bff; color: white; }
+        .button-secondary { background-color: #28a745; color: white; }
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pie de página superior (solo en Inicio) -->
+    <div id="2pie" class="header">
+        <h2>CLASES</h2>
+        <p>Miércoles 5: Curso Introductorio - Hasta las 15:50.</p>
+        <p>Jueves 6: Curso Introductorio - Hasta las 15:50.</p>
+        <p>Viernes 7: Curso Introductorio - Hasta las 15:50.</p>
+        <p>Sin clases toda la semana del Lunes 10 de Marzo.</p>
+        <p>El Lunes 17 Comenzamos clases normales - Hasta las 18:10.</p>
+    </div>
+
+    <div id="inicio" class="container">
+        <img src="https://abelcraftok.github.io/cnlp/CNLP.png" width="190" height="190" alt="Logo">
+        <p>Bienvenido al</p>
+        <h1>Sistema de Tareas de 1ro 7ma</h1>
+        <p>De este año 2025</p>
+        <div class="task-box">
+            <h2>Buscar tarea</h2>
+            <p>Introduce la fecha de cual día buscas la tarea... Ejemplo: 28/02/2025.</p>
+            <input type="text" id="fechaInput" class="input-fecha" placeholder="dd/mm/yyyy">
+            <button class="button button-secondary" onclick="buscarTarea()">Buscar</button>
+        </div>
+    </div>
+    
+    <!-- Pestaña 28-02-2025 -->
+    <div id="28-02-2025" class="container" style="display: none;">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>2: 0 y números pares.</p>
+            <p>3: Sumando las cifras da un múltiplo de 3.</p>
+            <p>4: 0 o 2 últimas cifras múltiplo de 4.</p>
+            <p>5: Termina en 0 o en 5.</p>
+            <p>6: Divisible por 2 y por 3 a la vez.</p>
+            <p>7: ...</p>
+            <p>8: Tres últimas cifras con 0 o múltiplo de 8, también sumando las últimas 3.</p>
+            <p>9: Suma de sus cifras de un múltiplo de 9.</p>
+            <p>10: Su última cifra termina en 0.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 26-02-2025 -->
+    <div id="26-02-2025" class="container" style="display: none;">
+        <div class="task-box">
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Leer las páginas: 18 y 19 del Cuadernillo.</p>
+            <p>Hacer la página 20 del Cuadernillo.</p>
+            <p>La página 20 tiene que estar resuelta de la siguiente manera:</p>
+            <img src="https://abelcraftok.github.io/cnlp/Lit1-26-02-2025.png" alt="Tarea Literatura">
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Copiar lo que aparece en la siguiente imagen.</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-26-02-2025.png" target="_blank">Clic aquí para ver la imagen...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 7:</h3>
+            <p>64: Todo número par es divisible por 2.</p>
+            <p>4: Sus 2 últimas cifras son 0 o múltiplo de 4.</p>
+            <p>5: Si termina en 0 o en 5.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 8:</h3>
+            <p>a. 1852 - 1258 - 1582.</p>
+            <p>b. 1528 - 1582 - 1852.</p>
+            <p>c. 8215 - 8125 - 1285.</p>
+        </div>
+    </div>
+
+    <!-- Pie de página inferior (solo en Inicio) -->
+    <div id="1pie" class="footer">
+        <p>Recuerda que este sitio web no está desarrollado por el colegio, sino que lo administra un alumno.</p>
+        <p>Forma de contacto al creador:</p>
+        <p>Número de Teléfono: <a href="https://wa.me/+542215989210">+54 221 598-9210</a></p>
+        <p>Correo Electrónico: <a href="mailto:pedrogabrielojeda664@gmail.com">pedrogabrielojeda664@gmail.com</a></p>
+    </div>
+
+    <script>
+        function buscarTarea() {
+            const fecha = document.getElementById("fechaInput").value.trim();
+            document.getElementById("inicio").style.display = "none";
+            document.getElementById("28-02-2025").style.display = fecha === "28/02/2025" ? "block" : "none";
+            document.getElementById("26-02-2025").style.display = fecha === "26/02/2025" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
