@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de 1ro 7ma</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/1ro7ma/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .text-mini {
+            font-size: 12px;
+            
+            font-weight: bold;
+            color: #000;    
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-primary { background-color: #007bff; color: white; }
+        .button-secondary { background-color: #28a745; color: white; }
+        .button-triniti { background-color: #fb33e9; color: white;}
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="inicio" class="container">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <p>Bienvenido al</p>
+        <h1>Foro de 1ro 7ma</h1>
+        <div class="task-box">
+            <h2>Buscar tarea</h2>
+            <p>Introduce la fecha de cual día buscas la tarea... Ejemplo: 28/02/2025.</p>
+            <input type="text" id="fechaInput" class="input-fecha" placeholder="dd/mm/yyyy">
+            <button class="button button-secondary" onclick="buscarTarea()">Buscar</button>
+        </div>
+        <div class="task-box">
+            <h2>Funciones Extras</h2>
+            <p>Entra y utiliza las funciones extras agregadas. Unas son: Avisos, Resumenes del Curso Introductorio...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('fun-extra')">Usar las Funciones Extras</button>
+        </div>
+    </div>
+
+    <!-- Pestaña fun-extra -->
+     <div id="fun-extra" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Funciones Extras</h1>
+        <div class="task-box">
+            <h2>RESUMENES:</h2>
+            <p>Visita los resumenes de lo visto/realizado en el CURSO INTRODUCTORIO.</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen')">Ir a los Resumenes</button>
+        </div>
+        <div class="task-box">
+            <h2>Avisos</h2>
+            <p>Visita los avisos con el siguiente boton...</p>
+            <button class="button button-secondary" onclick="mostrarPestaña('avisos')">Avisos</button>
+        </div>
+        <div class="task-box">
+            <h2>Información y Reglas del Sitio Web</h2>
+            <p>Entra para ver la informacion y reglas de este sitio web... (Recomendado para no sufrir confusiones con el sitio web).</p>
+            <button class="button button-primary" onclick="mostrarPestaña('reglas')">Reglas</button><button class="button button-secondary" onclick="mostrarPestaña('info')">Información</button>
+        </div>
+        <div class="task-box">
+            <h2>Publicar Contenido</h2>
+            <p>Si quieres publicar contenido en este foro, puedes hacerlo con el siguiente boton que te llevara a un formulario..</p>
+            <p>Tambien si quieres puedes dejar una idea para el foro haciendo clic en el siguiete boton que te llevara a un formulario...</p>
+            <a href="https://forms.gle/n6YmddYX9J9HAf5X7" target="_blank"><button class="button button-primary">Ir a Publicar Contenido</button></a><a href="https://forms.gle/TUMUjujNdvAPsLVi7" target="_blank"><button class="button button-secondary">Ir a dejar una Idea</button></a>
+        </div>
+    </div>
+
+    <!-- Pestaña reglas -->
+     <div id="reglas" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h2>REGLAS</h2>
+        <div class="task-box">
+            <p>Si quieres ver las reglas, puedes hacer lo siguiente:</p>
+            <a href="https://abelcraftok.github.io/1ro7ma/REGLAS.docx" target="_blank">
+                <button class="button button-secondary">Descargar</button>
+            </a>
+            <a href="https://abelcraftok.github.io/1ro7ma/REGLAS.pdf" target="_blank">
+                <button class="button button-primary">Ver online</button>
+            </a><p class="text-mini">Esta opcion solo funciona para computadora. Si se usa desde un celular en vez de verse onine se descargara</p>
+        </div>
+    </div>
+
+    <!-- Pestaña info -->
+     <div id="info" class="container" style="display: none;">
+        <img scr="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h2>INFORMACIÓN</h2>
+        <div class="task-box">
+            <p>Si quieres ver la información, puedes hacer lo siguiente:</p>
+            <a href="https://abelcraftok.github.io/1ro7ma/INFORMACION.docx" target="_blank">
+                <button class="button button-secondary">Descargar</button>
+            </a>
+            <a href="https://abelcraftok.github.io/1ro7ma/INFORMACION.pdf" target="_blank">
+                <button class="button button-primary">Ver online</button>
+            </a><p class="text-mini">Esta opcion solo funciona para computadora. Si se usa desde un celular en vez de verse onine se descargara</p>
+        </div>
+    </div>
+
+    <!-- Pestaña Avisos -->
+     <div id="avisos" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Avisos</h1>
+        <div class="separator"></div>
+        <div class="task-box">
+            <h2>Contraseñas para las respuestas de las tareas</h2>
+            <p>Ahora para acceder a las respuestas de las tareas es necesaria una contraseña. Esta la podras obtener en el Número de Teléfono: <a href="https://wa.me/+542215989210">+54 221 598-9210</a> pidiendosela...</p>
+        </div>
+     </div>
+
+    <!-- Pestaña resumen -->
+     <div id="resumen" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>RESUMENES</h1>
+        <div class="task-box">
+            <h2>Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>TEMAS:</p>
+            <p> </p>
+            <p>    -> El Trabajo de los Cientificos</p>
+            <p>    -> ¿Que Estudian las Ciencias Naturales?</p>
+            <p>    -> Lenguaje y Comunicacion</p>
+            <p>    -> Ciencias Naturales en la Argentina</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-C.N')">Ir al Resumen de Ciencias Naturales</button>
+        </div>
+        <div class="task-box">
+            <h2>Practicas del Lenguaje y Literatura</h2>
+            <p>En Practicas del Lenguaje y Literatura hablamos de...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-P.L.L')">Ir al Resumen de Practicas del Lenguaje y Literatura</button>
+        </div>
+        <div class="task-box">
+            <h2>Matemáticas</h2>
+            <p>En matemáticas hicimos trabajos practicos de repaso sobre...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-MAT')">Ir al resumen de Matemáticas</button>
+        </div>
+    </div>
+
+    <!-- Pestaña resumen-C.N -->
+     <div id="resumen-C.N" class="conteiner" style="display: none">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Ciencias Naturales</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-C.N.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
+    </div>
+
+    <!-- Pestaña resumen-P.L.L -->
+     <div id="resumen-P.L.L" class="conteiner" style="display: none">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Practicas del Lenguaje y Literatura</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-P.L.L.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
+    </div>
+
+    <!-- Pestaña resumen-MAT -->
+     <div id="resumen-MAT" class="conteiner" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Matemáticas</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <p> </p>
+        <a href="https://abelcraftok.github.io/cnlp/resumen-MAT.pdf" target="_blank">
+            <button class="button">Ver online el .pdf 🌐</button>
+        </a>
+    </div>
+    
+    <!-- Pestaña 28-02-2025 -->
+     <div id="28-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>2: 0 y números pares.</p>
+            <p>3: Sumando las cifras da un múltiplo de 3.</p>
+            <p>4: 0 o 2 últimas cifras múltiplo de 4.</p>
+            <p>5: Termina en 0 o en 5.</p>
+            <p>6: Divisible por 2 y por 3 a la vez.</p>
+            <p>7: ...</p>
+            <p>8: Tres últimas cifras con 0 o múltiplo de 8, también sumando las últimas 3.</p>
+            <p>9: Suma de sus cifras de un múltiplo de 9.</p>
+            <p>10: Su última cifra termina en 0.</p>
+        </div>
+    </div>
+    
+    <!-- Pestaña 26-02-2025 -->
+    <div id="26-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Leer las páginas: 18 y 19 del Cuadernillo.</p>
+            <p>Hacer la página 20 del Cuadernillo.</p>
+            <p>La página 20 tiene que estar resuelta de la siguiente manera:</p>
+            <img src="https://abelcraftok.github.io/cnlp/Lit1-26-02-2025.png" alt="Tarea Literatura">
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Copiar lo que aparece en la siguiente imagen.</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-26-02-2025.png" target="_blank">Clic aquí para ver la imagen...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 7:</h3>
+            <p>64: Todo número par es divisible por 2.</p>
+            <p>4: Sus 2 últimas cifras son 0 o múltiplo de 4.</p>
+            <p>5: Si termina en 0 o en 5.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 8:</h3>
+            <p>a. 1852 - 1258 - 1582.</p>
+            <p>b. 1528 - 1582 - 1852.</p>
+            <p>c. 8215 - 8125 - 1285.</p>
+        </div>
+    </div>
+    
+    <!-- Pestaña 10-02-2025 -->
+    <div id="10-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Ejercicio: ¡Empezamos Jugando!</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-10-02-2025.png" target="_blank">Clic aquí para ver el Ejercicio Resuelto...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 1:</h3>
+            <p>a.1. 38.444 - 100 = 38.344</p>
+            <p>a.2. 38.444 - 300 = 38.144</p>
+            <p>b.1. 233.546 - 10.000 = 223.546</p>
+            <p>b.2. 233.546 + 10.000 = 243.546</p>
+            <p>c.1. 69.909 + 1.000 = 70.909</p>
+            <p>c.2. 69.909 - 1.000 = 68.909</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 2:</h3>
+            <p>a. 41.700 + 3.200 = 44.900</p>
+            <p>b. 38.500 - 12.400 = 26.100</p>
+            <p>c. 21.110 - 4.100 = 17.010</p>
+            <p>d. 35.780 - 35.120 = 660</p>
+            <div class="separator"></div>
+            <h4>Explicaciones:</h4>
+            <p>a. Comencé sumando cifra a cifra.</p>
+            <p>b. Lo resolví restando cifra por cifra.</p>
+            <p>c. Lo resolví restando cifra por cifra.</p>
+            <p>d. Lo resolví restando correctamente.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 3:</h3>
+            <p>a. 325 x 1.000.000 = 325.000.000</p>
+            <p>b. 140 x 10.000.000 = 1.400.000.000</p>
+            <p>c. 602 x 100.000 = 60.200.000</p>
+            <p>d. 879 x 10 x 10 x 10 = 879.000</p>
+            <div class="separator"></div>
+            <h4>Explicaciones:</h4>
+            <p>a. Multipliqué 325 por 1 millón, agregando los ceros correspondientes.</p>
+            <p>b. Multipliqué 140 por 10 millones, agregando los ceros correspondientes.</p>
+            <p>c. Multipliqué 602 por 100.000, agregando los ceros correspondientes.</p>
+            <p>d. Multipliqué 879 por 10 tres veces, lo que equivale a 879.000.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 06-03-2025 -->
+    <div id="06-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>Revivision del examen...</p>
+            <p>Entonces no hubo tarea</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Geografía</h2>
+            <div class="separator"></div>
+            <p>Hacer los puntos: 1 (a-, b- y c-), 2 (a- y b-), 3 y el 4</p>
+            <p>Ubicacion: Cuadernillo de Geografía</p>
+            <p>Pagina: 12</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 05-03-2025 -->
+    <div id="05-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Hoy hubo examen las 2 horas. Por lo tanto no hubo tarea...</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Hacer el punto 1 de "Ejercicios de Repaso" que está ubicado en la página 25.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 07-03-2025 -->
+    <div id="07-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Revision del examen...</p>
+            <p>Por lo tanto no hubo tarea.</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Literatura y Practicas del Lenguaje</h2>
+            <p>Evaluacion las 2 hs</p>
+        </div>
+    </div>
+
+    <!-- Pie de página inferior actualizado -->
+    <div id="1pie" class="footer">
+        <p>Formulario: "<a href="https://forms.gle/EhEAsiXoeiHUHWw7A">Nuevas Ideas</a>"</p>
+        <p>Forma de contacto al creador:</p>
+        <a href="https://wa.me/+542215989210" target="_blank">
+            <button class="button button-secondary">Número de Teléfono</button>
+        </a>
+        <a href="mailto:pedrogabrielojeda664@gmail.com" target="_blank">
+            <button class="button button-primary">Correo Electrónico</button>
+        </a>
+        <p>Accede a los grupos de 1ro 7ma:</p>
+        <a href="https://chat.whatsapp.com/J3aI7dG9dew6fpSnwdFsUJ" target="_blank">
+            <button class="button button-primary">Grupo de Alumnos</button>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a" target="_blank">
+            <button class="button button-secondary">Canal de actualizaciones</button>
+        </a>
+        <p class="text-mini">Version: 1.2</p>
+    </div>
+
+    <script> 
+        function buscarTarea() {
+            var fechaIngresada = document.getElementById("fechaInput").value.trim();
+            var fechaFormateada = fechaIngresada.replace(/\//g, "-"); // Reemplaza / por -
+        
+            // Ocultar todas las tareas
+            var todasLasTareas = document.querySelectorAll(".container");
+            todasLasTareas.forEach(tarea => tarea.style.display = "none");
+        
+            // Mostrar solo la tarea de la fecha ingresada
+            var tareaDelDia = document.getElementById(fechaFormateada);
+            if (tareaDelDia) {
+                tareaDelDia.style.display = "block";
+            } else {
+                alert("No hay tarea para esta fecha.");
+            }
+        }
+    
+        function mostrarPestaña(id) {
+        // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+            div.style.display = 'none';
+        });
+    
+        // Muestra la pestaña seleccionada
+        document.getElementById(id).style.display = 'block';
+        }
+    
+    </script>
+</body>
+</html>
