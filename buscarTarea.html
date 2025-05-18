@@ -130,7 +130,7 @@
             <h2>Buscar tarea</h2>
             <p>Introduce una fecha en el siguiente formato: "08/04/2025" o "8/4/25"...</p>
             <input type="text" id="fechaInput" class="input-fecha" placeholder="DIA/MES/AÑO">
-            <button class="button button-secondary" onclick="buscarTarea()">Buscar</button>
+            <button class="button button-secondary" onclick="buscar()">Buscar</button>
         </div>
     </div>
 
@@ -526,26 +526,22 @@
         </div>
     </div>
 
-    <!-- Pie de página inferior actualizado -->
+    <!-- Pie de página inferior -->
     <div id="1pie" class="footer">
         <p>Formulario: "<a href="https://forms.gle/EhEAsiXoeiHUHWw7A">Nuevas Ideas</a>"</p>
+        <button class="button button-secondary" onclick="window.open('https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a')">Canal de actualizaciones</button>
+        <button class="button button-secondary" onclick="window.open('https://chat.whatsapp.com/L2XCJ1yDbXOGjeXXO5MdrB')">Grupo de Tareas</button>
         <p>Forma de contacto al creador:</p>
-        <a href="https://wa.me/+542215989210" target="_blank">
-            <button class="button button-secondary">Número de Teléfono</button>
-        </a>
-        <a href="mailto:pedrogabrielojeda664@gmail.com" target="_blank">
-            <button class="button button-primary">Correo Electrónico</button>
-        </a>
-        <p>Accede a los grupos de 1ro 7ma:</p>
-        <a href="https://chat.whatsapp.com/J3aI7dG9dew6fpSnwdFsUJ" target="_blank">
-            <button class="button button-primary">Grupo de Alumnos</button>
-        </a>
-        <a href="https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a" target="_blank">
-            <button class="button button-secondary">Canal de actualizaciones</button>
-        </a>
+        <button class="button button-primary" onclick="window.open('https://wa.me/+542215989210')">Número de Teléfono</button>
+        <button class="button button-primary" onclick="window.open('mailto:pedrogabrielojeda664@gmail.com')">Correo Electrónico</button>
     </div>
 
     <script> 
+        function buscar() {
+            alert("Las tareas ya se dejaron de subir a la pagina, por lo tanto te recomendamos que busques en el grupo especifico de whatsapp que tiene 1ro 7ma. Gracias.")
+            buscarTarea();
+        }
+
         function buscarTarea() {
             var fechaIngresada = document.getElementById("fechaInput").value.trim();
             var fechaFormateada = fechaIngresada.replace(/\//g, "-"); // Reemplaza / por -
