@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de 1ro 7ma</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/1ro7ma/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .text-mini {
+            font-size: 12px;
+            
+            font-weight: bold;
+            color: #000;    
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-primary { background-color: #007bff; color: white; }
+        .button-secondary { background-color: #28a745; color: white; }
+        .button-triniti { background-color: #fb33e9; color: white;}
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .supe {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pie de página superior actualizado -->
+    <div id="2pie" class="supe">
+        <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/'">Volver al Foro</button>
+    </div>
+
+    <!-- Pestaña inicio -->
+     <div id="inicio" class="container">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Foro de 1ro 7ma</h1>
+        <h1>Visitar Versiones Anteriores</h1>
+        <div class="task-box">
+            <p>Selecciona la versión que se desea visitar:</p>
+            <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.1.html'">0.1 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.2.html'">0.2 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.3.html'">0.3 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.4.html'">0.4 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.5.html'">0.5 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.6.html'">0.6 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.7.html'">0.7 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.8.html'">0.8 (no tiene soporte)</button>
+            <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/0.9.html'">0.9 (no tiene soporte)</button>
+            <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.0.html'">1.0 (no tiene soporte)</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.1.html'">1.1</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.2.html'">1.2</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.3.html'">1.3</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('14')">1.4</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('15')">1.5</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('16')">1.6</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('17')">1.7</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('18')">1.8</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('19')">1.9</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('20')">2.0</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('21')">2.1</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('22')">2.2</button>
+            <button class="button button-secondary" onclick="mostrarPestaña('23')">2.3</button>
+        </div>
+    </div>
+
+    <div id="14" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/avisos.html'">avisos</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.4/resumenes.html'">resumenes</button>
+        </div>
+    </div>
+
+    <div id="15" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/avisos.html'">avisos</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.5/resumenes.html'">resumenes</button>
+        </div>
+    </div>
+
+    <div id="16" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/avisos.html'">avisos</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.6/resumenes.html'">resumenes</button>
+        </div>
+    </div>
+
+    <div id="17" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.7/resumenes.html'">resumenes</button>
+        </div>
+    </div>
+
+    <div id="18" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.8/resumenes.html'">resumenes</button>
+        </div>
+    </div>
+
+    <div id="19" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/resumenes.html'">resumenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/1.9/examenes.html'">examenes</button>
+        </div>
+    </div>
+
+    <div id="20" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/resumenes.html'">resumenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.0/examenes.html'">examenes</button>
+        </div>
+    </div>
+
+    <div id="21" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/resumenes.html'">resumenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.1/examenes.html'">examenes</button>
+        </div>
+    </div>
+
+    <div id="22" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/resumenes.html'">resumenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.2/examenes.html'">examenes</button>
+        </div>
+    </div>
+
+    <div id="23" class="container" style="display: none;">
+        <div class="task-box">
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/agenda.html'">agenda</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/buscarTarea.html'">buscarTarea</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/index.html'">index</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/info.html'">info</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/publicarcontenido.html'">publicarcontenido</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/reglas.html'">reglas</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/resumenes.html'">resumenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/examenes.html'">examenes</button>
+            <button class="button button-secondary" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/2.3/versiones.html'">versiones</button>
+        </div>
+    </div>
+<!-- Pie de página inferior -->
+<div id="ipie" class="footer">
+    <p>Formulario: <a href="https://forms.gle/EhEAsiXoeiHUHMw7A">Nuevas Ideas</a></p>
+    <button class="button button-secondary" onclick="window.open('https://whatsapp.com')">Abrir WhatsApp</button>
+    <button class="button button-secondary" onclick="window.open('https://chat.whatsapp.com')">Chat de WhatsApp</button>
+    <p>Forma de contactar al creador:</p>
+    <button class="button button-primary" onclick="window.open('https://wa.me/+542215900066')">WhatsApp directo</button>
+    <button class="button button-primary" onclick="window.open('mailto:pedrograbielojeda@gmail.com')">Correo 1</button>
+    <button class="button button-primary" onclick="window.open('mailto:pedronacio166@gmail.com')">Correo 2</button>
+    <p class="text-mini">Versión: 2.3</p>
+</div>
+<script> 
+        function mostrarPestaña(id) {
+        // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+            div.style.display = 'none';
+        });
+    
+        // Muestra la pestaña seleccionada
+        document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
