@@ -1,0 +1,18 @@
+====================================================================================================
+MENSAJE DE NUEVA ACTUALIZACION:
+=======-==-=====-==============
+[img]
+*<<< 📢 Nueva actualización 📥 >>>*
+
+*Actualizacion del Archivo:* 
+`versiones.html`
+`index.html`
+
+*>> INFORMACIÓN 📢:*
+> 1. Agregue el archivo: `versiones.html`
+> 2. En el archivo: `versiones.html` podran encontrar todas las versiones.
+
+*Versión: 🖥️📱*
+*Titulo:* Acceso a las versiones anteriores.
+*№ de Versión:* 2.3
+*Enlace para acceder a sitio web:* https://abelcraftok.github.io/1ro7ma/
