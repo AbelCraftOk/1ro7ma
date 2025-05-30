@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de 1ro 7ma</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/1ro7ma/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .text-mini {
+            font-size: 12px;
+            
+            font-weight: bold;
+            color: #000;    
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-primary { background-color: #007bff; color: white; }
+        .button-secondary { background-color: #28a745; color: white; }
+        .button-triniti { background-color: #fb33e9; color: white;}
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .supe {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pie de página superior actualizado -->
+    <div id="2pie" class="supe">
+        <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/1ro7ma/'">Volver al Foro</button>
+    </div>
+
+    <!-- Pestaña resumen -->
+     <div id="resumen" class="container">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>RESUMENES</h1>
+        <div class="task-box">
+            <h2>Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>TEMAS:</p>
+            <p> </p>
+            <p>    -> El Trabajo de los Cientificos</p>
+            <p>    -> ¿Que Estudian las Ciencias Naturales?</p>
+            <p>    -> Lenguaje y Comunicacion</p>
+            <p>    -> Ciencias Naturales en la Argentina</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-C.N')">Ir al Resumen de Ciencias Naturales</button>
+        </div>
+        <div class="task-box">
+            <h2>Practicas del Lenguaje y Literatura</h2>
+            <p>En Practicas del Lenguaje y Literatura hablamos de...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-P.L.L')">Ir al Resumen de Practicas del Lenguaje y Literatura</button>
+        </div>
+        <div class="task-box">
+            <h2>Matemáticas</h2>
+            <p>En matemáticas hicimos trabajos practicos de repaso sobre...</p>
+            <button class="button button-primary" onclick="mostrarPestaña('resumen-MAT')">Ir al resumen de Matemáticas</button>
+        </div>
+    </div>
+
+    <!-- Pestaña resumen-C.N -->
+     <div id="resumen-C.N" class="conteiner" style="display: none">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Ciencias Naturales</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <button class="button button-primary" onclick="window.location.href='https://abelcraftok.github.io/cnlp/resumen-C.N.pdf'">Ver online el .pdf 🌐</button>
+    </div>
+
+    <!-- Pestaña resumen-P.L.L -->
+     <div id="resumen-P.L.L" class="conteiner" style="display: none">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Practicas del Lenguaje y Literatura</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/cnlp/resumen-P.L.L.pdf'">Ver online el .pdf 🌐</button>
+    </div>
+
+    <!-- Pestaña resumen-MAT -->
+     <div id="resumen-MAT" class="conteiner" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Matemáticas</h1>
+        <h2>Formas de acceder al resumen:</h2>
+        <button class="button button-triniti" onclick="window.location.href='https://abelcraftok.github.io/cnlp/resumen-MAT.pdf'">Ver online el .pdf 🌐</button>
+    </div>
+
+    <!-- Pie de página inferior -->
+    <div id="1pie" class="footer">
+        <p>Formulario: "<a href="https://forms.gle/EhEAsiXoeiHUHWw7A">Nuevas Ideas</a>"</p>
+        <button class="button button-secondary" onclick="window.open('https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a')">Canal de actualizaciones</button>
+        <button class="button button-secondary" onclick="window.open('https://chat.whatsapp.com/L2XCJ1yDbXOGjeXXO5MdrB')">Grupo de Tareas</button>
+        <p>Forma de contacto al creador:</p>
+        <button class="button button-primary" onclick="window.open('https://wa.me/+542215989210')">Número de Teléfono</button>
+        <button class="button button-primary" onclick="window.open('mailto:pedrogabrielojeda664@gmail.com')">Correo Electrónico Personal</button>
+        <button class="button button-primary" onclick="window.open('mailto:pedronacio166@hotmail.com')">Correo Electrónico Escolar</button>
+        <p class="text-mini">Version: 2.2</p>
+    </div>
+
+    <script> 
+        function mostrarPestaña(id) {
+        // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+            div.style.display = 'none';
+        });
+    
+        // Muestra la pestaña seleccionada
+        document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
