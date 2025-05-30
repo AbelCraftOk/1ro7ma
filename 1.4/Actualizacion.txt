@@ -1,0 +1,31 @@
+Actualizar el archivo: "buscarTarea.html"
+
+1- Agregar las tareas del dia: "19/03/2025", "20/03/2025" y del "21/03/2025".
+
+1.1- Lo agregado del dia: "19/03/2025":
+- Tarea de Ciencias Naturales.
+
+1.2- Lo agregado del dia: "20/03/2025":
+- Tarea de Formacion Visual.
+
+1.3- Lo agregado del dia: "21/03/2025":
+- Tarea de Ciencias Naturales.
+
+====================================================================================================
+MENSAJE DE NUEVA ACTUALIZACION:
+=======-==-=====-==============
+[img]
+*<<< 📢 Nueva actualización 📥 >>>*
+
+*Actualizacion del Archivo: `buscarTarea.html`*
+
+*>> INFORMACIÓN 📢:*
+> 1. Agregamos la tarea de Ciencias Naturales del dia 19/03/2025.
+> 2. Agregamos la tarea de Formacion Visual del dia 20/03/2025.
+> 3. Agregamos la tarea de Ciencia Naturales del dia 20/03/2025.
+
+*Versión: 🖥️📱*
+*Titulo: Tareas agregadas de los dias: 19/03/2025 y 20/03/2025*
+*№: 1.4*
+*Enlace para acceder a sitio web: https://abelcraftok.github.io/1ro7ma/*
+*Enlace para acceder al buscador de tareas: https://abelcraftok.github.io/1ro7ma/buscarTarea.html*

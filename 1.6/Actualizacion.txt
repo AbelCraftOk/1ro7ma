@@ -1,0 +1,16 @@
+====================================================================================================
+MENSAJE DE NUEVA ACTUALIZACION:
+=======-==-=====-==============
+[img]
+*<<< 📢 Nueva actualización 📥 >>>*
+
+*Actualizacion del Archivo: `buscarTarea.html`*
+
+*>> INFORMACIÓN 📢:*
+> 1. Agregamos las tareas de los dias: 21, 25, 26, 27 y 28 de Marzo.
+
+*Versión: 🖥️📱*
+*Titulo:* Tareas agregadas
+*№ de Versión:* 1.5
+*Enlace para acceder a sitio web:* https://abelcraftok.github.io/1ro7ma/
+*Enlace para acceder al buscador de tareas:* https://abelcraftok.github.io/1ro7ma/buscarTarea.html

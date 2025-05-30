@@ -1,0 +1,15 @@
+====================================================================================================
+MENSAJE DE NUEVA ACTUALIZACION:
+=======-==-=====-==============
+[img]
+*<<< 📢 Nueva actualización 📥 >>>*
+
+*Actualizacion del Archivo:* `index.html`
+
+*>> INFORMACIÓN 📢:*
+> 1. Agregamos los archivos: `Temas dados en matematicas.docx` `Temas dados en matematicas.pdf` y `Informacion del Archivo.jpg`
+
+*Versión: 🖥️📱*
+*Titulo:* Tareas agregadas
+*№ de Versión:* 1.8
+*Enlace para acceder a sitio web:* https://abelcraftok.github.io/1ro7ma/

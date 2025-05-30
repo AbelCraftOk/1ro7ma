@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de 1ro 7ma</title>
+    <link rel="Icon" type="png" href="https://abelcraftok.github.io/1ro7ma/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .text-mini {
+            font-size: 12px;
+            
+            font-weight: bold;
+            color: #000;    
+        }
+        .container {
+            flex: 1;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .task-box {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .recuadro {
+            border: 2px solid black;
+            background-color: #c3c3c3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            width: 300px; /* Puedes ajustar el tamaño */
+        }
+        .recuadro:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .task-box h2 {
+            margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+        .button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button-primary { background-color: #007bff; color: white; }
+        .button-secondary { background-color: #28a745; color: white; }
+        .button-triniti { background-color: #fb33e9; color: white;}
+        .input-fecha {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer, .header {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .supe {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .tarea-titulo {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: auto;
+        }
+        .tarea-subtitulo {
+            text-align: auto;
+            font-weight: bold;
+            font-size: 20px;
+            color: auto;
+        }
+        .tarea-info {
+            text-align: auto;
+            font-weight: bold;
+            font-size: 20px;
+            color: red;
+        }
+        .img {
+            text-align: center;
+            margin: auto;
+            height: auto;
+        }
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pie de página superior actualizado -->
+    <div id="2pie" class="supe">
+        <a href="https://abelcraftok.github.io/1ro7ma/" target="_blank">
+            <button class="button button-triniti">Volver al Foro</button>
+        </a>
+    </div>
+    
+    <div id="inicio" class="container">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <h1>Buscar Tarea</h1>
+        <div class="task-box">
+            <h2>Buscar tarea</h2>
+            <p>Introduce la fecha de cual día buscas la tarea... Ejemplo: 28/02/2025.</p>
+            <input type="text" id="fechaInput" class="input-fecha" placeholder="dd/mm/yyyy">
+            <button class="button button-secondary" onclick="buscarTarea()">Buscar</button>
+        </div>
+    </div>
+
+    <!-- Pestaña 28-03-2025 -->
+     <div id="28-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Historia</h2>
+            <div class="separator"></div>
+            <p class="tarea-subtitulo">Organizacion del tiempo</p>
+            <p>Decada = 10 años.</p>
+            <p>Siglo = 100 años.</p>
+            <p>Milesimo = 1.000 años.</p>
+            <p class="tarea-subtitulo">Calculo de los siglos:</p>
+            <p>- Si el año termina en dos ceros ("0"), los eliminamos y tendremos como resultado a que siglo pertenece el año.</p>
+            <p>- Si el año no termina en dos ceros ("0"), eliminamos los dos ultimos digitos y agregamos uno a lo que nos queda.</p>
+            <p class="tarea-subtitulo">¿A que siglos pertenecen las siguientes fechas?</p>
+            <p>1.659 =</p>
+            <p>1.187 =</p>
+            <p>600 =</p>
+            <p>6 =</p>
+            <p>727 a.c. =</p>
+            <p>1.200 a.c. =</p>
+            <p>601 =</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 27-03-2025 -->
+     <div id="27-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/Logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Geografía</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Video: "Evolucion de la Costanera Sur (1814 - 2021)"</p>
+            <p>1- Tomar apuntes del video<a href="https://www.youtube.com/watch?v=FrCyC6Hd61o" target="_blank"><button class="button button-triniti">Ver el video</button></a></p>
+            <p>2- Elavorar una linea de tiempo apartir de los apuntes anotados en el punto 1.</p>
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Practicas del Lenguaje y Literatura</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Traer para la proxima clase...</p>
+            <p>Fotocopiar y leer "Feroz" de P. Bernasconi y "La Huida de un oso bailarin" de L. Toistoi</p>
+            <p>Anotar: Si lo imprimieron y si lo leyeron.</p>
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: F. Visual</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">T.P. №2 = Repaso y conseptos de Formacion Visual</p>
+            <p class="tarea-info">(Lo siguiente que aparecera se debera copiar en una hoja para dibujar en la parte de atras y las respuestas se pondran en la carpeta)</p>
+            <p>1- ¿Que creen que se estudia en Formacion Visual?</p>
+            <p>2- ¿Por que les parece que la materia se llama asi?</p>
+            <p>3- ¿Por que creen que se estudia? ¿Les parece importante?</p>
+            <p>4- En nuestra vida cotidiana. ¿Donde podemos encontrar imagenes?</p>
+            <p>5- Nombra tema/s o trabajos que recuerdes haber ado en plastica en años anteriores.</p>
+            <p>6- Realizar un dibujo en donde podamos ver algunos de estos temas dados anteriormente.</p>
+            <p class="tarea-info">(Responder estas respuestas en la carpeta)</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 26-03-2025 -->
+     <div id="26-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Historia</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Actividad de Repaso</p>
+            <p><p class="tarea-subtitulo">Fuentes:</p>Son los restos que usan los/as investigadores/as para conocer el pasado.</p>
+            <p><p class="tarea-subtitulo">Fuentes segun su composicion:</p>
+            <p>- Materiales: Joyas, armas, herramientas, etc.</p>
+            <p>- Escritas: Periodicos, documentos, cartas, librs, contratos, etc.</p>
+            <p>- Orales: Discursos y entrevistas.</p>
+            <p>- Graficas o Audiovisuales: Pinturas, grabaciones, etc.</p>
+            <p><p class="tarea-subtitulo">Fuentes secundarias:</p>Son todas las investigaciones que han realizado otros/as investigadores/as. Sobre el tema que estudiamos y en un hecho posterior al heco que se investiga.</p>
+            <p class="tarea-subtitulo">Numeros romanos:</p>
+            <p>Escribe en numeros romanos desde el 1 al 25.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 25-03-2025 -->
+     <div id="25-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/Logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de Practicas del Lenguaje y Literatura</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Practicas del Lenguaje</p>
+            <p class="tarea-titulo">y Literatura (P.L.L.)</p>
+            <p class="tarea-titulo">Prof. Maria Melina Dangelo</p>
+            <p>Hacer todo el cuadernillo del curso introductorio</p>
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">T.P. №1</p>
+            <p>Hacer actividades: 1 y 2</p>
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: F. Musical</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Formacion Musical</p>
+            <p class="tarea-titulo">Prof. Lara</p>
+            <p>Incendié - Camila Moreno</p>
+            <p>Introducción =</p>
+            <p>1. Ritmo (ostinato) - Percusion.</p>
+            <p>2. Melodia - Voz, notas largas.</p>
+            <p>Otra voz = Con letra = Se silencia el material 2 y el 1 sigue sonando.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 21-03-2025 -->
+     <div id="21-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/Logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Revision: "Curso de Ingreso"</p>
+            <p>Responde segun lo visto:</p>
+            <p>a. ¿Cual es la finalidad que persiguen las Ciencias Naturales?</p>
+            <p>b. ¿Que disciplinas integran estas ciencias? Describe brevemente cada una.</p>
+            <p>c. ¿Por que se dice que la ciencias son provisorias?</p>
+            <p>d. ¿Por que las Ciencias Naturales son experimentales?</p>
+            <p>e. Menciona algun tema correspondiente a esta area que te halla despertado la curiosidad (pude ser algo que viste en la primaria o aca)</p>
+        </div>
+    </div>
+    
+    <!-- Pestaña 20-03-2025 -->
+     <div id="20-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Formacion Visual</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Formacion Visual</p>
+            <p>Prof. Marcela Rodrigo</p>
+            <p>Dia: Jueves la 3ra y 4ta hora</p>
+            <p class="tarea-titulo">T.P. №1=Dia de la Memoria, la Verdad y la Justicia</p>
+            <p>Alumno/a: </p>
+            <p>Salon: 1ro 7ma</p>
+            <p>1- ¿Que se conmemora el 24 de Marzo?</p>
+            <p>2- ¿Que significa vivir en democracia?</p>
+            <p>3- ¿Que es lo mas valiosos para ustedes de estar en democracia?</p>
+            <p>4- De manera individual realizar una imagen reprensetando tus ideas y concluciones sobre vivir en democracia que respondiste en las preguntas anteriores.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 19-03-2025 -->
+     <div id="19-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo" class="img">
+        <div class="task-box">
+            <h2>Tarea de: Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p class="tarea-titulo">Ciencias Naturales</p>
+            <p>Prof. Maria Siliz Libano</p>
+            <p>Dias: </p>
+            <p>Miercoles: 3ra, 4ta y 5ta</p>
+            <p>Viernes: 1ra, 2da y 3ra</p>
+            <p>6 horas catedra</p>
+        </div>
+    </div>
+
+
+    <!-- Pestaña 28-02-2025 -->
+     <div id="28-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>2: 0 y números pares.</p>
+            <p>3: Sumando las cifras da un múltiplo de 3.</p>
+            <p>4: 0 o 2 últimas cifras múltiplo de 4.</p>
+            <p>5: Termina en 0 o en 5.</p>
+            <p>6: Divisible por 2 y por 3 a la vez.</p>
+            <p>7: ...</p>
+            <p>8: Tres últimas cifras con 0 o múltiplo de 8, también sumando las últimas 3.</p>
+            <p>9: Suma de sus cifras de un múltiplo de 9.</p>
+            <p>10: Su última cifra termina en 0.</p>
+        </div>
+    </div>
+    
+    <!-- Pestaña 26-02-2025 -->
+    <div id="26-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Leer las páginas: 18 y 19 del Cuadernillo.</p>
+            <p>Hacer la página 20 del Cuadernillo.</p>
+            <p>La página 20 tiene que estar resuelta de la siguiente manera:</p>
+            <img src="https://abelcraftok.github.io/cnlp/Lit1-26-02-2025.png" alt="Tarea Literatura">
+        </div>
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Copiar lo que aparece en la siguiente imagen.</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-26-02-2025.png" target="_blank">Clic aquí para ver la imagen...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 7:</h3>
+            <p>64: Todo número par es divisible por 2.</p>
+            <p>4: Sus 2 últimas cifras son 0 o múltiplo de 4.</p>
+            <p>5: Si termina en 0 o en 5.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 8:</h3>
+            <p>a. 1852 - 1258 - 1582.</p>
+            <p>b. 1528 - 1582 - 1852.</p>
+            <p>c. 8215 - 8125 - 1285.</p>
+        </div>
+    </div>
+    
+    <!-- Pestaña 10-02-2025 -->
+    <div id="10-02-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Ejercicio: ¡Empezamos Jugando!</p>
+            <p><a href="https://abelcraftok.github.io/cnlp/Mat1-10-02-2025.png" target="_blank">Clic aquí para ver el Ejercicio Resuelto...</a></p>
+            <div class="separator"></div>
+            <h3>Ejercicio 1:</h3>
+            <p>a.1. 38.444 - 100 = 38.344</p>
+            <p>a.2. 38.444 - 300 = 38.144</p>
+            <p>b.1. 233.546 - 10.000 = 223.546</p>
+            <p>b.2. 233.546 + 10.000 = 243.546</p>
+            <p>c.1. 69.909 + 1.000 = 70.909</p>
+            <p>c.2. 69.909 - 1.000 = 68.909</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 2:</h3>
+            <p>a. 41.700 + 3.200 = 44.900</p>
+            <p>b. 38.500 - 12.400 = 26.100</p>
+            <p>c. 21.110 - 4.100 = 17.010</p>
+            <p>d. 35.780 - 35.120 = 660</p>
+            <div class="separator"></div>
+            <h4>Explicaciones:</h4>
+            <p>a. Comencé sumando cifra a cifra.</p>
+            <p>b. Lo resolví restando cifra por cifra.</p>
+            <p>c. Lo resolví restando cifra por cifra.</p>
+            <p>d. Lo resolví restando correctamente.</p>
+            <div class="separator"></div>
+            <h3>Ejercicio 3:</h3>
+            <p>a. 325 x 1.000.000 = 325.000.000</p>
+            <p>b. 140 x 10.000.000 = 1.400.000.000</p>
+            <p>c. 602 x 100.000 = 60.200.000</p>
+            <p>d. 879 x 10 x 10 x 10 = 879.000</p>
+            <div class="separator"></div>
+            <h4>Explicaciones:</h4>
+            <p>a. Multipliqué 325 por 1 millón, agregando los ceros correspondientes.</p>
+            <p>b. Multipliqué 140 por 10 millones, agregando los ceros correspondientes.</p>
+            <p>c. Multipliqué 602 por 100.000, agregando los ceros correspondientes.</p>
+            <p>d. Multipliqué 879 por 10 tres veces, lo que equivale a 879.000.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 06-03-2025 -->
+    <div id="06-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Ciencias Naturales</h2>
+            <div class="separator"></div>
+            <p>Revivision del examen...</p>
+            <p>Entonces no hubo tarea</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Geografía</h2>
+            <div class="separator"></div>
+            <p>Hacer los puntos: 1 (a-, b- y c-), 2 (a- y b-), 3 y el 4</p>
+            <p>Ubicacion: Cuadernillo de Geografía</p>
+            <p>Pagina: 12</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 05-03-2025 -->
+    <div id="05-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Hoy hubo examen las 2 horas. Por lo tanto no hubo tarea...</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Literatura y Prácticas del Lenguaje</h2>
+            <div class="separator"></div>
+            <p>Hacer el punto 1 de "Ejercicios de Repaso" que está ubicado en la página 25.</p>
+        </div>
+    </div>
+
+    <!-- Pestaña 07-03-2025 -->
+    <div id="07-03-2025" class="container" style="display: none;">
+        <img src="https://abelcraftok.github.io/1ro7ma/logo.png" width="190" height="190" alt="Logo">
+        <div class="task-box">
+            <h2>Tarea de: Matemáticas</h2>
+            <div class="separator"></div>
+            <p>Revision del examen...</p>
+            <p>Por lo tanto no hubo tarea.</p>
+            <div class="separator"></div>
+            <h2>Tarea de: Literatura y Practicas del Lenguaje</h2>
+            <p>Evaluacion las 2 hs</p>
+        </div>
+    </div>
+
+
+    <!-- Pie de página inferior actualizado -->
+    <div id="1pie" class="footer">
+        <p>Formulario: "<a href="https://forms.gle/EhEAsiXoeiHUHWw7A">Nuevas Ideas</a>"</p>
+        <p>Forma de contacto al creador:</p>
+        <a href="https://wa.me/+542215989210" target="_blank">
+            <button class="button button-secondary">Número de Teléfono</button>
+        </a>
+        <a href="mailto:pedrogabrielojeda664@gmail.com" target="_blank">
+            <button class="button button-primary">Correo Electrónico</button>
+        </a>
+        <p>Accede a los grupos de 1ro 7ma:</p>
+        <a href="https://chat.whatsapp.com/J3aI7dG9dew6fpSnwdFsUJ" target="_blank">
+            <button class="button button-primary">Grupo de Alumnos</button>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb8g1nz29759kFc0nf3a" target="_blank">
+            <button class="button button-secondary">Canal de actualizaciones</button>
+        </a>
+    </div>
+
+    <script> 
+        function buscarTarea() {
+            var fechaIngresada = document.getElementById("fechaInput").value.trim();
+            var fechaFormateada = fechaIngresada.replace(/\//g, "-"); // Reemplaza / por -
+        
+            // Ocultar todas las tareas
+            var todasLasTareas = document.querySelectorAll(".container");
+            todasLasTareas.forEach(tarea => tarea.style.display = "none");
+        
+            // Mostrar solo la tarea de la fecha ingresada
+            var tareaDelDia = document.getElementById(fechaFormateada);
+            if (tareaDelDia) {
+                tareaDelDia.style.display = "block";
+            } else {
+                alert("No hay tarea para esta fecha.");
+            }
+        }
+    
+        function mostrarPestaña(id) {
+        // Oculta todas las pestañas
+            document.querySelectorAll('.container').forEach(div => {
+            div.style.display = 'none';
+        });
+    
+        // Muestra la pestaña seleccionada
+        document.getElementById(id).style.display = 'block';
+        }
+    
+    </script>
+</body>
+</html>
