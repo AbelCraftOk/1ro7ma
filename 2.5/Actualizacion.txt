@@ -1,0 +1,17 @@
+====================================================================================================
+MENSAJE DE NUEVA ACTUALIZACION:
+=======-==-=====-==============
+[img]
+*<<< 📢 Nueva actualización 📥 >>>*
+
+*Actualizacion del Archivo:*
+`index.html`
+`versiones.html`
+
+*>> INFORMACIÓN 📢:*
+> 1. Agregue las versiones '24' y '25' para poder verse luego de actualizar la aplicacion.
+> 2. Agregaamos material para realizar los trabajos practicos de F. Visual.
+
+*Titulo:* Versiones viejas y TP de F. Visual
+*№ de Versión:* 2.5
+*Enlace para acceder a sitio web:* https://abelcraftok.github.io/1ro7ma/
